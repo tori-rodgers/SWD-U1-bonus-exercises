@@ -3,7 +3,7 @@
 /*************************************/
 
 /*
-	Because object store values by key names and not by index (like arrays do), a regular for loop doesn't work. If you want to iterate through the properties of an object, you must use a for...in loop. 
+	Because objects store values by key names and not by index (like arrays do), a regular for loop doesn't work. If you want to iterate through the properties of an object, you must use a for...in loop. 
 
 	Also, it's sometimes necessary to combine both for loops and for...in loops if you are working with objects and arrays together. Let's investigate!
 */
