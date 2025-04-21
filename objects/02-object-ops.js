@@ -26,14 +26,14 @@ let sunsetDiner = {
 }; // Reminder: objects require semicolons after them
 
 // Give the iterator any variable name you want, then use that inside the loop to refer to each new key.
-for (someKey in sunsetDiner) {
+for (let someKey in sunsetDiner) {
 	console.log(sunsetDiner[someKey]);
 }
 
 // Did you notice that the value for knownFor is an array? What if we need to loop through that as well? Let's put a regular for loop (for arrays) inside the for...in loop (for objects).
 
 // Let's say we don't know which keys have arrays, but we need to print only the elements in any arrays found. We'll use a conditional with the helpful Array method .isArray() to see if the key holds an array in the first place, then loop to print the array's contents if that evaluates to true.
-for (aKey in sunsetDiner) {
+for (let aKey in sunsetDiner) {
 	if (Array.isArray(sunsetDiner[aKey])) {
 		for (let i=0; i < sunsetDiner[aKey].length; i++) {
 			console.log(sunsetDiner[aKey][i]);
@@ -112,14 +112,14 @@ let attractions = [klam, wbg];
 */
 
 // TODO: use nested loops to print values inside objects
-for (let i=0; i < attractions.length; i++) {
-	for (key in attractions[i]) {
-		if (Array.isArray(attractions[i][key])) { // array
-			for (let j=0; j < attractions[i][key].length; j++) {
-				console.log(attractions[i][key][j]);
+for (let attraction of attractions) {
+	for (key in attraction) {
+		if (Array.isArray(attraction[key])) { // array
+			for (let j=0; j < attraction[key].length; j++) {
+				console.log(attraction[key][j]);
 			}
 		} else { // not an array
-			console.log(attractions[i][key]);
+			console.log(attraction[key]);
 		}
 	}
 	console.log(" ") // quick cheat to put empty line between them
