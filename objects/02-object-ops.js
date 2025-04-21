@@ -87,6 +87,23 @@ for (let restaurant of restaurants) {
 */
 
 // TODO: create objects and put them in an array
+let klam = {
+	name: "Kendrick-Lampton Art Museum",
+	location: "Cedar Pointe, ID",
+	adultTicketPrice: 26,
+	childTicketPrice: 14,
+	famousFeatures: ["the Manet Gallery", "Renaissance Wing", "Tiffany Collection"]
+};
+
+let wbg = {
+	name: "Westwood Botanical Gardens",
+	location: "Westwood, PA",
+	adultTicketPrice: 19,
+	childTicketPrice: 10,
+	famousFeatures: ["White Falls", "English Garden Path", "Victorian Village"]
+};
+
+let attractions = [klam, wbg];
 
 /*
 	Loop through the array, then within that for loop, use a for...in loop to grab values from each key and print them to the console. If you come across a key storing an array, print each element in the array instead of the array itself. Remember that you need a new index variable with each nested FOR loop (i, j are common).
@@ -95,6 +112,18 @@ for (let restaurant of restaurants) {
 */
 
 // TODO: use nested loops to print values inside objects
+for (let i=0; i < attractions.length; i++) {
+	for (key in attractions[i]) {
+		if (Array.isArray(attractions[i][key])) { // array
+			for (let j=0; j < attractions[i][key].length; j++) {
+				console.log(attractions[i][key][j]);
+			}
+		} else { // not an array
+			console.log(attractions[i][key]);
+		}
+	}
+	console.log(" ") // quick cheat to put empty line between them
+}
 
 /*
 	Last task: loop through the outer array and print a single template literal for each attraction using placeholders referencing the object at each index. Here's an example:
@@ -105,5 +134,11 @@ for (let restaurant of restaurants) {
 	A favorite with the locals, the Kendrick-Lampton Art Museum boasts over a dozen features, including the Manet Gallery, Renaissance Wing, and Tiffany Collection. Admission is $26 for adults, $14 for children ages 5-12, and free for children 4 and under.
 */
 
-// TODO: Print a template literal
-
+// TODO: Print a template literal for each object
+for (let attraction of attractions) {
+	console.log(`**********************************************
+${attraction.name} - ${attraction.location} 
+********************************************** 
+A favorite with the locals, the ${attraction.name} boasts over a dozen features, including ${attraction.famousFeatures[0]}, ${attraction.famousFeatures[1]}, and ${attraction.famousFeatures[2]}. Admission is $${attraction.adultTicketPrice} for adults, $${attraction.childTicketPrice} for children ages 5-12, and free for children 4 and under.
+`);
+}
