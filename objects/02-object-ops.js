@@ -106,7 +106,7 @@ let wbg = {
 let attractions = [klam, wbg];
 
 /*
-	Loop through the array, then within that for loop, use a for...in loop to grab values from each key and print them to the console. If you come across a key storing an array, print each element in the array instead of the array itself. Remember that you need a new index variable with each nested FOR loop (i, j are common).
+	Loop through the array, then within that for loop, use a for...in loop to grab values from each key and print them to the console. If you come across a key storing an array, print each element in the array instead of the array itself.
 
 	NOTE: This is a tough one to think through when you're new at this. If you get completely stuck, reference the solution that accompanies this starter code. But make an effort to figure it out yourself first!
 */
@@ -115,8 +115,8 @@ let attractions = [klam, wbg];
 for (let attraction of attractions) {
 	for (key in attraction) {
 		if (Array.isArray(attraction[key])) { // array
-			for (let j=0; j < attraction[key].length; j++) {
-				console.log(attraction[key][j]);
+			for (let feature of attraction[key]) {
+				console.log(feature);
 			}
 		} else { // not an array
 			console.log(attraction[key]);
@@ -142,3 +142,13 @@ ${attraction.name} - ${attraction.location}
 A favorite with the locals, the ${attraction.name} boasts over a dozen features, including ${attraction.famousFeatures[0]}, ${attraction.famousFeatures[1]}, and ${attraction.famousFeatures[2]}. Admission is $${attraction.adultTicketPrice} for adults, $${attraction.childTicketPrice} for children ages 5-12, and free for children 4 and under.
 `);
 }
+
+// TODO: Bonus - use a higher-order function instead of a for or for...of loop
+
+attractions.forEach(attraction => {
+    console.log(`**********************************************
+${attraction.name} - ${attraction.location} 
+********************************************** 
+A favorite with the locals, the ${attraction.name} boasts over a dozen features, including ${attraction.famousFeatures[0]}, ${attraction.famousFeatures[1]}, and ${attraction.famousFeatures[2]}. Admission is $${attraction.adultTicketPrice} for adults, $${attraction.childTicketPrice} for children ages 5-12, and free for children 4 and under.
+`);
+});
