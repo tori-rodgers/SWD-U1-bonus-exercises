@@ -9,13 +9,13 @@
 // There are boxes of boxes.
 // In some cases there are boxes of boxes of boxes.
 
-// Use recursion to count up all the items in all the boxes!
-
 let itemsToUnpack = [
     [2, 6, 8, [1, 9]],
     [[3, 4, 2], [14, 8], 22],
     [15, [5, 8], 2, [25, 7]]
 ];
+
+// EXAMPLE: Use recursion to count up all the items in all the boxes!
 
 function countNestedItems(data) {
     // console.log(data);
@@ -31,5 +31,5 @@ function countNestedItems(data) {
 	return countNestedItems(data.shift()) + countNestedItems(data);
 }
 
-// Call the function with the test data
+// EXAMPLE: Call the function with the test data
 console.log(countNestedItems(itemsToUnpack));

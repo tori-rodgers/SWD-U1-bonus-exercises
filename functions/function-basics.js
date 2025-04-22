@@ -8,12 +8,13 @@ let userInput1 = "abc";
 let userInput2 = "5551920";
 let userInput3 = "3145555678";
 
-// Function with parameter and a return value of true or false
+// EXAMPLE: Write a function with parameter and a return value of true or false
+// that validates that a phone number is both a number and has 10 digits
 function isValidPhoneNum(userInput) {
   return !isNaN(Number(userInput)) && userInput.length === 10;
 }
 
-// TODO: Call function and print return values for each sample
+// EXAMPLE: Call function and print return values for each sample
 console.log(isValidPhoneNum(userInput1));
 console.log(isValidPhoneNum(userInput2));
 console.log(isValidPhoneNum(userInput3));
@@ -26,7 +27,7 @@ let userPhone = "(314) 555-1234";
 
 // "Helper" or "minor" functions
 
-// TODO: Get user input, validate, and return validated input
+// EXAMPLE: Get user input, validate with function written above, and return validated input
 function promptUserForNewPhone() {
     let newPhone = input.question("\nTo update your contact information, please enter your 10-digit phone number.\n");
     while (!isValidPhoneNum(newPhone)) {
@@ -35,7 +36,7 @@ function promptUserForNewPhone() {
     return newPhone;
 }
 
-// TODO: Format a phone number like this: (314) 555-1234 and return the string
+// EXAMPLE: Format a phone number like this: (314) 555-1234 and return the string
 function formatPhone(phoneNum) {
     let areaCode = phoneNum.slice(0, 3);
     let exchange = phoneNum.slice(3, 6);
@@ -43,27 +44,25 @@ function formatPhone(phoneNum) {
     return `(${areaCode}) ${exchange}-${line}`;
 }
 
-// TODO: assign new value to userPhone
+// EXAMPLE: assign a new value to existing global variable userPhone
 function updatePhone(phoneNum) {
     userPhone = formatPhone(phoneNum);
 }
 
-// "Main" function 
-// Making use of other functions
+// EXAMPLE: Write a primary function that makes use of other functions
 function runPhoneUpdateSequence() {
 
-  // TODO: Ask user for new phone number, with validation
+  // EXAMPLE: Ask user for new phone number, with validation
     let newNum = promptUserForNewPhone();
 
-  // TODO: Update their record
+  // EXAMPLE: Update their record
   updatePhone(newNum);
 
-  // TODO: Print a confirmation using number now on record
+  // EXAMPLE: Print a confirmation using number now on record
   console.log(`
 Thank you! Your new phone number has been saved: ${userPhone}
 `);
-
 }
 
-// TODO: Call main function
+// EXAMPLE: Call primary function
 runPhoneUpdateSequence();
