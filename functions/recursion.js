@@ -72,7 +72,7 @@ function linearFactorial(n) {
 // Recursive again, but without all the console.log statements
 function recursiveFactorialNoLogs(n) {
     if (n === 1) {
-    return n;
+        return n;
     } 
     return n * recursiveFactorial(n-1);
 }
