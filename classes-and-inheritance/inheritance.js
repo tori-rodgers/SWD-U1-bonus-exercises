@@ -210,3 +210,64 @@ console.log(cokeZero instanceof Beverage);
 
 // Try the same for cokeZero with the Juice class
 console.log(cokeZero instanceof Juice);
+
+
+/** YOUR TURN **/
+
+/*
+    TODO: Create a Milk class that is a child of Beverage
+
+    Add a new property called "source",
+    which could take values like "almond", "dairy", or "soy" 
+    for objects created from this class
+
+    Add an optional property called "isNonDairy" that defaults to false.
+    Add another optional property called "flavoring" that defaults to null.
+
+    Customize the describe() method (be creative!)
+
+    Create several instances of this class with unique values
+    (think regular milk, chocolate milk, almond milk, soy milk, etc...)
+    Include examples that use optional parameters and some that don't.
+    Print the objects and call methods on a few of them
+*/
+
+class Milk extends Beverage {
+
+    constructor(name, ounces, container, source, isNonDairy=false, flavoring=null) {
+        super(name, ounces, container);
+        this.source = source;
+        this.isNonDairy = isNonDairy;
+        this.flavoring = flavoring;
+    }
+
+    describe() {
+        super.describe();
+        if (this.flavoring) { // null is falsy
+            console.log(`The ${this.flavoring} flavor is very tasty!`);
+        }
+        if (this.isNonDairy) {
+            console.log("What a nice non-dairy option.")
+        }
+    }
+
+}
+
+let goatMilk = new Milk("Goat Milk", 64, "jug", "goat");
+let oatMilk = new Milk("Oat Milk", 16, "carton", "oats", true);
+let vanillaCashewMilk = new Milk("Vanilla Cashew Milk", 32, "carton", "cashews & almonds", true, "vanilla");
+let chocolateMilk = new Milk("Chocolate Milk", 8, "carton", "cow", false, "chocolate");
+
+console.log(goatMilk);
+console.log(oatMilk);
+console.log(vanillaCashewMilk);
+console.log(chocolateMilk);
+
+goatMilk.describe();
+
+oatMilk.describe();
+
+vanillaCashewMilk.describe();
+
+chocolateMilk.recycle();
+chocolateMilk.describe();
