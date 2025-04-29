@@ -1,13 +1,4 @@
-// LECTURE EXAMPLES
-// WEBDEV UNIT 1, CHAPTER 14: UNIT TESTING
-
-/* 
-	This is the SOLUTION CODE. Switch back to the main branch to use the starter code.
-
-	If Carrie is your primary instructor, 
-  you can locate the YouTube playlist for your cohort here:
-	https://youtube.com/@CodeWithCarrie
-*/
+/** UNIT TESTING **/
 
 /* 
 	EXAMPLE: In the corresponding spec file, write a test for the MS_PER_YEAR constant below.
