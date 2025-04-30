@@ -18,9 +18,11 @@ ARTICLE
     SECTION 2: 
     Detail plans for tomorrow:
         - Tomorrow's tasks - use ordered list
-        - Each plant's requirements (quantity, cluster?, spacing, depth) - use table
 
     SECTION 3:
+        - Each plant's requirements (quantity, cluster?, spacing, depth) - use table
+
+    SECTION 4:
     Share recommendation for bulbs: Breck's https://brecks.com
 
 FOOTER
