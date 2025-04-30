@@ -1,2 +1,10 @@
-node_modules
-package-lock.json
+# Prevent tens of thousands of local npm files 
+# from being pushed to GitHub
+**/node_modules
+
+# A Mac file for local use only
+**/.DS_Store
+
+# Another local npm file that would only need to be
+# included if using GitHub Actions for this repo
+**/package-lock.json

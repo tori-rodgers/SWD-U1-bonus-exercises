@@ -1,0 +1,35 @@
+
+SWD UNIT 1 - HTML
+
+It's important to plan out your page before laying down code. 
+    - What kind of content, images, links, etc. will you need?
+    - In what order do you want to display the content?
+
+Here's an example (but make it your own with different content and sequencing!):
+
+HEADER    
+    - Title of blog: The Green thumb
+    - Author: Ivana Grostuv
+
+ARTICLE
+    SECTION 1:
+    Report on today's activities
+
+    SECTION 2: 
+    Detail plans for tomorrow:
+        - Tomorrow's tasks - use ordered list
+        - Each plant's requirements (quantity, cluster?, spacing, depth) - use table
+
+    SECTION 3:
+    Share recommendation for bulbs: Breck's https://brecks.com
+
+FOOTER
+    - Copyright statement
+
+IMAGES
+    - Float general image to right at top (use local file)
+    - Use images in info table for flowers - sources:
+        Crocuses https://drive.google.com/thumbnail?sz=w50&id=188YN_LwrZ8sQRc188UiCPWFiuKVCSx02
+        Hyacinth https://drive.google.com/thumbnail?sz=w50&id=1wZU8kWKcTWCIEMjz-Ce7dTU8Fcb-NM9I
+        Daffodils https://drive.google.com/thumbnail?sz=w50&id=1aA8X-YI8kQNF5nITzv2MAKKZYSgC16YT
+        Tulips https://drive.google.com/thumbnail?sz=w50&id=1Vl0Ch4MQslwh9EyhnGX1RK9YZbPuHtvo
