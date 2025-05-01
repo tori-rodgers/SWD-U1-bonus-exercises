@@ -1,0 +1,131 @@
+/** HTML & CSS **/
+
+body {
+    color: #1f451f;
+    background: url('./images/blossoms.jpg') fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw; /* set to 80vw if not setting box-sizing property below */
+    padding: 0 10vw; /* top/bottom left/right */
+    margin: 0;
+    box-sizing: border-box; /* allows for full width */
+}
+
+header,
+footer {
+    color: white;
+    background: rgb(32, 70, 32);
+    padding: 10px 30px;
+}
+
+main {
+    background-color: white;
+    padding: 30px;
+}
+
+h1 {
+    font-family: cursive;
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+h3 {
+    background-color: rgb(54, 122, 33);
+    color: white;
+    font-size: 1.3rem;
+    padding: 8px;
+}
+
+h4 {
+    color: white;
+    background: linear-gradient(to right, rgb(111, 175, 89), white);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 6px;
+}
+
+h3,
+h4 {
+    margin: 30px 0 0; /* top left/right bottom */
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    color: #333;
+}
+
+th {
+    text-align: center;
+    width: 80px;
+    padding: 8px 0;
+}
+
+td {
+    height: 80px;
+}
+
+th,
+tr:nth-child(even) {
+    background-color: #bbb; /* equivalent of #bbbbbb */
+}
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+em {
+    font-style: normal;
+    text-decoration: underline;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.extra-space-below {
+    margin-bottom: 15px;
+}
+
+.bigger-text {
+    font-size: 1.2rem;
+}
+
+#special {
+    font-weight: bold;
+    width: 50%;
+    min-width: 200px;
+    padding: 10px;
+    margin: 20px auto; /* auto will center it */
+    outline: 8px double rgb(32, 70, 32);
+    animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: darkmagenta;
+        outline-color: darkgreen;
+    }
+    33% {
+        color: darkorange;
+        outline-color: darkblue;
+    }
+    67% {
+        color: darkcyan;
+        outline-color: darkred;
+    }
+    100% {
+        color: darkmagenta;
+        outline-color: darkgreen;
+    }
+}
