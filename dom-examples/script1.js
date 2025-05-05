@@ -4,6 +4,7 @@ import { mlkData } from "./data/speeches.js";
 window.onload = () => {
 
     // DECLARE OBJECTS REPRESENTING HTML ELEMENTS ON PAGE
+    const pageTitle = document.querySelector("title");
     const main = document.querySelector("main");
 
     // Initialize three objects that represent the three elements already in <main>
@@ -24,6 +25,9 @@ window.onload = () => {
 
     // FUNCTIONS BELOW
     function renderPage(speechData) {
+
+        // Set the <title> in the <head>
+        pageTitle.innerText = `${speechData.title} | ${speechData.speaker}`;
 
         // Set background image
         document.body.style.background = `black url(${speechData.imagePath}) no-repeat center top`;
