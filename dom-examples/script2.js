@@ -5,6 +5,7 @@ import { allData } from "./data/speeches.js";
 window.onload = () => {
 
     // DECLARE OBJECTS REPRESENTING HTML ELEMENTS ON PAGE
+    const pageTitle = document.querySelector("title");
     const main = document.querySelector("main");
 
     // Add object to represent select
@@ -42,6 +43,9 @@ window.onload = () => {
 
     // FUNCTIONS BELOW
     function renderPage(speechData) {
+
+        // Set the <title> in the <head>
+        pageTitle.innerText = `${speechData.title} | ${speechData.speaker}`;
 
         // Set background image
         document.body.style.background = `black url(${speechData.imagePath}) no-repeat center top`;
