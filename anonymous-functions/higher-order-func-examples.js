@@ -150,4 +150,10 @@ console.log(fruits == fruitsWithQuantity);
 console.log(fruits[2] == fruitsWithQuantity[2]);
 
 // What happens if you don't use the spread operator to return a new object?
-// TODO
+const sameFruitsWithQuantity = fruits.map(fruit => {
+    fruit.quantity = 12;
+	return fruit;
+});
+
+console.log(fruits == sameFruitsWithQuantity);
+console.log(fruits[2] == sameFruitsWithQuantity[2]);
