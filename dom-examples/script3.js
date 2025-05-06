@@ -1,4 +1,3 @@
-// Import array of objects from speeches.js
 import { allData } from "./data/speeches.js";
 import { getRandomNumber } from "./utils/utilityFuncs.js";
 
