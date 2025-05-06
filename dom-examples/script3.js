@@ -44,7 +44,7 @@ speechSelect.addEventListener("change", (event) => {
     setTimeout(() => {
         shouldClearTimeout = false;
         renderPage(currentSpeechData); // in with the new
-    }, 100);
+    }, 100); // without this slight delay it will be word salad when switching speeches
 });
 
 // FUNCTIONS BELOW
@@ -69,8 +69,9 @@ function renderPage(speechData) {
 
     function printNextChar() {
         if (shouldClearTimeout) {
+            // debugger; // will allow you to see call stack in DevTools
             clearTimeout(timeoutId);
-            return;
+            return; // if this is missing it will be word salad when switching speeches
         }
         if (idx < text.length) {
 
@@ -111,7 +112,7 @@ function renderPage(speechData) {
     printNextChar();
 }
 
-// Write a function to clear the current innerText and innerHTML from the four elements in <main> before loading a different speech
+// Clears the current innerText and innerHTML from the four elements in <main> before loading a different speech
 function clearSpeechDisplay() {
     title.innerText = "";
     speaker.innerText = "";
