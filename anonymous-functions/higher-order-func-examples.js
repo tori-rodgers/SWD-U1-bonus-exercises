@@ -1,7 +1,9 @@
 /** ANONYMOUS FUNCTIONS */
 
 // Here's a standard utility function
-
+function getRandomNumber(max, min = 0) {
+	return Math.round(Math.random() * (max - min));
+}
 
 // TODO: Rewrite the function above as an anonymous function stored in constant
 
