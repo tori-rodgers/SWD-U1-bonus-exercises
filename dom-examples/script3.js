@@ -26,7 +26,7 @@ let shouldClearTimeout = false;
 
 // RENDER ITEMS NOT YET ON PAGE
 Object.values(allData).forEach(speech => {
-    speechSelect.innerHTML += `<option id=${speech.id} value=${speech.id}>"${speech.title}" by ${speech.speaker}</option>`;
+    speechSelect.innerHTML += `<option id=${speech.id} value=${speech.id}>"${speech.title}" by ${allData.speaker}</option>`;
 }); // this also could have been done with a for...in loop
 
 // Default to first speech in object
@@ -101,7 +101,7 @@ function renderPage(speechData) {
             idx++;
 
             // NOTE: log character and interval to see sequence
-            console.log(idx, currChar, interval);
+            // console.log(idx, currChar, interval);
 
             // Recurse to prevent concurrent intervals for all characters
             timeoutId = setTimeout(printNextChar, interval); 
