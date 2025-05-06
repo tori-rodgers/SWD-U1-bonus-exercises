@@ -50,6 +50,11 @@ window.addEventListener("load", () => {
   
     });
   
+    // Note the difference between .log() and .dir() here - 
+    // One gives you a literal representation of the elements
+    // The other gives you a searchable tree to see all of the
+    // hidden attributes for the element and its children
+    
     console.log(numButton);
     console.dir(numButton);
   
