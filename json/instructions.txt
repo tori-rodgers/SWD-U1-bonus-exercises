@@ -1,0 +1,12 @@
+Comments don't work in JSON! So here is a text file instead.
+
+For object1.json:
+Code an object which has keys storing values of simple data types:
+Ex: string, number, boolean
+
+For object2.json:
+Code an object which has keys storing values of multiple data types:
+Ex: string, number, boolean, array, object
+
+For array.json:
+Code an array of objects which each have the same key/value pair structure
