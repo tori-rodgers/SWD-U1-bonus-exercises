@@ -22,7 +22,7 @@ Now it the time to lift our nation from the quicksand of racial injustice to the
 
 Now is the time to make justice a reality to all of God's children.
 
-I would be fatal for the nation to overlook the urgency of the moment and to underestimate the determination of it's colored citizens. This sweltering summer of the colored people's legitimate discontent will not pass until there is an invigorating autumn of freedom and equality. Nineteen sixty-three is not an end but a beginning. Those who hope that the colored Americans needed to blow off steam and will now be content will have a rude awakening if the nation returns to business as usual.
+It would be fatal for the nation to overlook the urgency of the moment and to underestimate the determination of it's colored citizens. This sweltering summer of the colored people's legitimate discontent will not pass until there is an invigorating autumn of freedom and equality. Nineteen sixty-three is not an end but a beginning. Those who hope that the colored Americans needed to blow off steam and will now be content will have a rude awakening if the nation returns to business as usual.
 
 There will be neither rest nor tranquility in America until the colored citizen is granted his citizenship rights. The whirlwinds of revolt will continue to shake the foundations of our nation until the bright day of justice emerges.
 
