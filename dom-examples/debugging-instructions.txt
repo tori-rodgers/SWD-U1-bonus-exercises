@@ -1,0 +1,20 @@
+index3.html and script3.js have errors!
+
+Use your investigative skills to track them down.
+
+1. Why is the stylesheet not being applied, and we see only the styles that are being added by JavaScript later? 
+    - Check the JS console in the browser - definitely an error, but not obvious what it is
+    - Use common sense to check the import in the HTML file... there it is! A simple typo.
+
+2. Why are the authors' names undefined in the <option> elements in the dropdown field?
+    - Nothing in the JS console...
+    - You might be able to figure it out just looking at the file in VSCode
+    - If not, Adding a debugger in a strategic spot will help you slow down and examine the data in the Sources pane of the browser DevTools
+    - Aha! It's a reference issue.
+
+3. Why, if you use the dropdown field to switch to a different speech, are you getting word salad?
+    - Nothing wrong with the data in speeches.js
+    - Nothing wrong with the references, since the MLK speech that loads first is rendering properly
+    - Maybe this has to do with the recursion of PrintNextChar()
+    - Adding a console.log() shows that the characters are being sent in the right order
+    - Time for some debugging in the browser DevTools!
