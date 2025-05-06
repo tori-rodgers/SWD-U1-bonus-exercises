@@ -8,13 +8,11 @@ function getRandomNumber(max, min = 0) {
 // TODO: Rewrite the function above as an anonymous function stored in constant
 
 
-// TODO: Use simplified syntax to treamline the anonymous function to a single line of code
+// TODO: Use simplified syntax to streamline the anonymous function to a single line of code
+
 
 // TODO: Test each of the three functions by printing their return values to the console
 
-
-
-/* YOUR TURN! */
 
 // Some test data
 let someAddress = {
