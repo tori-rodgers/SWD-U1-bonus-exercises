@@ -21,6 +21,22 @@ document.addEventListener('click', function (event) {
 		});
 	}
 
+    // If you want to fetch multiple dog pics at once and display them dynamically
+    // Use this approach — notice the data from the API is structured differently
+    
+    // if (event.target.id === "dog-button") {
+    //     fetch("https://dog.ceo/api/breeds/image/random/5").then((response) => {
+    //         response.json().then((data) => {
+    //             console.log(data);
+    //             for (photoURL of data.message) {
+    //                 result.innerHTML += `
+    //                     <img src="${photoURL}" width="300px" />
+    //                 `;
+    //             }
+    //         });
+    //     });
+    // }
+
 	// Challenge! Use async/await syntax for this one.
 	// RANDOM CAT PIC courtesy of https://thecatapi.com/
 	// You will need to request a free key
