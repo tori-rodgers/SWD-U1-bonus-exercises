@@ -1,68 +1,185 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* Global CSS — use anywhere because it's imported in main.jsx */
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	background-image: url('./assets/images/pexels-reneterp-334978.jpg');
+	/* image courtesy of Rene Terp https://www.pexels.com/@reneterp/ */
+	background-attachment: fixed;
+	background-size: 150vh;
+	font-family: 'Rethink Sans', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+	display: flex;
+	align-items: flex-end;
+    background-color: #23350b;
+	/* background-image: linear-gradient(#23350b, #374e1b); */
+	color: white;
+	height: 120px;
+	padding: 0px 20px 8px;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 10px 0 100px;
+}
+
+div {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h2 {
+	font-family: 'Rozha One', cursive;
+	font-size: 2.7rem;
+	font-weight: normal;
+	margin: 0;
+}
+
+h3 {
+	color: #23350b;
+	font-family: 'Rozha One', sans-serif;
+	font-size: 1.8rem;
+	line-height: 1;
+	text-transform: uppercase;
+	margin-top: 0;
+	border-bottom: 2px solid #23350b;
+}
+
+h4 {
+    color: #23350b;
+	font-family: 'Rozha One', sans-serif;
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+img {
+	border-radius: 4px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+	background-color: #374e1b;
+	color: white;
+	font-size: 0.6rem;
+	height: 16px;
+	margin-left: 6px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+	background-color: #52643c;
+}
+
+#left-column {
+	flex-direction: column;
+	min-width: 240px;
+	width: 300px;
+	padding: 20px;
+}
+
+#right-column {
+	flex-direction: column;
+	width: calc(100% - 300px);
+	padding: 20px;
+}
+.clickable {
+	cursor: pointer;
+}
+
+.card {
+	padding: 4px;
+	margin-bottom: 10px;
+	border: 2px solid #eee;
+	border-radius: 6px;
+}
+
+.available-plant-card {
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 6px;
+	max-height: 62px;
+}
+
+.img-txt-combo {
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.amount-txt {
+	color: #374e1b;
+	text-transform: uppercase;
+}
+
+.arrow-group {
+	align-items: center;
+	font-size: 1.4rem;
+	gap: 6px;
+	margin-right: 6px;
+}
+
+.chevron-left {
+	color: #6f1f3c;
+	cursor: pointer;
+	&:hover {
+		color: #560d28;
+		transform: scale(1.1);
+	}
+}
+
+.chevron-right {
+	color: #7a8f60;
+	cursor: pointer;
+	&:hover {
+		color: #52643c;
+		transform: scale(1.1);
+	}
+}
+
+.flowerbed {
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 16px;
+	gap: 20px;
+	border-color: #374e1b;
+	border-style: solid;
+	border-width: 2px 2px 2px 12px;
+}
+
+.flowerbed-name {
+	align-items: center;
+}
+
+.plant-grid {
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.selected-plant-card {
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	max-width: 162px;
+}
+
+.big-num {
+	color: #374e1b;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.unavailable {
+	filter: grayscale(100%);
+	opacity: 0.6;
 }
