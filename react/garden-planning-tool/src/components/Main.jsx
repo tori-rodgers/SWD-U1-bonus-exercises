@@ -1,4 +1,4 @@
-import Flowerbed from "./Flowerbed";
+import Flowerbed from './Flowerbed';
 
 const Main = () => {
 	return (
@@ -9,9 +9,9 @@ const Main = () => {
 				<p id="2">Blue Hyacinth - 4 available</p>
 				<p id="3">Red Tulip - 10 available</p>
 			</div>
-            <div id="right-column">
-                <Flowerbed />
-            </div>
+			<div id="right-column">
+				<Flowerbed />
+			</div>
 		</main>
 	);
 };

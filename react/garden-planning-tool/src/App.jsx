@@ -6,7 +6,7 @@ function App() {
 	return (
 		<div id="page-layout">
 			<Header />
-            <Main />
+			<Main />
 		</div>
 	);
 }
