@@ -6,7 +6,6 @@ body {
     https://www.pexels.com/photo/close-up-of-flowers-15964007/ */
 	background-attachment: fixed;
 	background-size: 120vw;
-	/* background-repeat: no-repeat; */
 	background-position: 50% 50%;
 	font-family: 'Rethink Sans', sans-serif;
 	font-size: 1.1rem;
@@ -110,9 +109,10 @@ button:hover {
 }
 
 .card {
+    background-color: white;
 	padding: 4px;
 	margin-bottom: 10px;
-	border: 2px solid #eee;
+	border: 2px solid #ecf0e6;
 	border-radius: 6px;
 }
 
@@ -127,6 +127,10 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
+}
+
+.text-box {
+    margin: 0 0 0 10px;
 }
 
 .amount-txt {
@@ -210,4 +214,7 @@ button:hover {
 	#right-column {
 		width: 100%;
 	}
+    .arrow-group {
+        transform: rotate(90deg);
+    }
 }
