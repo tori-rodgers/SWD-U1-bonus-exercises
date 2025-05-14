@@ -1,41 +1,56 @@
+import { useState } from 'react';
 import Flowerbed from './Flowerbed';
 import AvailablePlant from './AvailablePlant';
+import data from '../data/data.json'; // TEMP until fetching JSON
 
 const Main = () => {
-	// Temporary test data
-	let testPlants = [
-		{
-			id: 1,
-			name: 'Hyacinth',
-			color: 'blue',
-			image:
-				'https://drive.google.com/thumbnail?sz=w150&id=1wZU8kWKcTWCIEMjz-Ce7dTU8Fcb-NM9I',
-			numAvailable: 6,
-			numAllocated: 2,
-		},
-		{
-			id: 2,
-			name: 'Tulip',
-			color: 'red',
-			image:
-				'https://drive.google.com/thumbnail?sz=w150&id=1Vl0Ch4MQslwh9EyhnGX1RK9YZbPuHtvo',
-			numAvailable: 6,
-			numAllocated: 6,
-		},
-		{
-			id: 3,
-			name: 'Daffodil',
-			color: 'yellow',
-			image:
-				'https://drive.google.com/thumbnail?sz=w150&id=1BwQ_BdSgB6XGdU_OOm5iYQFXKjKEcW1Q',
-			numAvailable: 4,
-			numAllocated: 12,
-		},
-	];
+	// State variable to hold all plant objects
+	const [allPlants, setAllPlants] = useState(
+		data.map(obj => {
+			return { ...obj, numAllocated: 0 };
+		})
+	);
 
-    let availablePlantsJSX = testPlants.map(plant => {
-        return <AvailablePlant key={plant.id} plant={plant} />;
-    });
+	const handleReturn = thePlant => {
+		if (thePlant.numAllocated > 0) {
+			let updatedPlants = allPlants.map(aPlant => {
+				return aPlant.id !== thePlant.id
+					? aPlant
+					: {
+							...aPlant,
+							numAvailable: aPlant.numAvailable + 1,
+							numAllocated: aPlant.numAllocated - 1,
+					  };
+			});
+			setAllPlants(updatedPlants);
+		}
+	};
+
+	const handleAllocate = thePlant => {
+		if (thePlant.numAvailable > 0) {
+			let updatedPlants = allPlants.map(aPlant => {
+				return aPlant.id !== thePlant.id
+					? aPlant
+					: {
+							...aPlant,
+							numAvailable: aPlant.numAvailable - 1,
+							numAllocated: aPlant.numAllocated + 1,
+					  };
+			});
+			setAllPlants(updatedPlants);
+		}
+	};
+
+	let availablePlantsJSX = allPlants.map(plant => {
+		return (
+			<AvailablePlant
+				key={plant.id}
+				plant={plant}
+				returnPlant={handleReturn}
+				allocatePlant={handleAllocate}
+			/>
+		);
+	});
 
 	return (
 		<main>
@@ -44,7 +59,9 @@ const Main = () => {
 				{availablePlantsJSX}
 			</div>
 			<div id="right-column">
-				<Flowerbed selectedPlants={testPlants} />
+				<Flowerbed
+					selectedPlants={allPlants.filter(plant => plant.numAllocated > 0)}
+				/>
 			</div>
 		</main>
 	);

@@ -68,7 +68,7 @@ img {
 }
 
 button {
-	background-color: #374e1b;
+	background-color: #768f57;
 	color: white;
 	font-size: 0.6rem;
 	height: 16px;
@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-	background-color: #52643c;
+	background-color: #a1c278;
 }
 
 #page-layout {
@@ -104,12 +104,27 @@ button:hover {
 	padding: 20px;
 }
 
+#spinner-container {
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* text-align: center; */
+}
+
+#spinner-icon {
+	display: block;
+	color: #52643c;
+	margin: 0;
+}
+
 .clickable {
 	cursor: pointer;
 }
 
 .card {
-    background-color: white;
+	background-color: white;
 	padding: 4px;
 	margin-bottom: 10px;
 	border: 2px solid #ecf0e6;
@@ -130,7 +145,7 @@ button:hover {
 }
 
 .text-box {
-    margin: 0 0 0 10px;
+	margin: 0 0 0 10px;
 }
 
 .amount-txt {
@@ -202,6 +217,12 @@ button:hover {
 	opacity: 0.6;
 }
 
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 @media screen and (max-width: 900px) {
 	#page-layout {
 		width: 92vw;
@@ -214,7 +235,7 @@ button:hover {
 	#right-column {
 		width: 100%;
 	}
-    .arrow-group {
-        transform: rotate(90deg);
-    }
+	.arrow-group {
+		transform: rotate(90deg);
+	}
 }
