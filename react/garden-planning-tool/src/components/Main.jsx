@@ -1,16 +1,7 @@
-import { useState } from 'react';
 import Flowerbed from './Flowerbed';
 import AvailablePlant from './AvailablePlant';
-import data from '../data/data.json'; // TEMP until fetching JSON
 
-const Main = () => {
-	// State variable to hold all plant objects
-	const [allPlants, setAllPlants] = useState(
-		data.map(obj => {
-			return { ...obj, numAllocated: 0 };
-		})
-	);
-
+const Main = ({ allPlants, setAllPlants }) => {
 	const handleReturn = thePlant => {
 		if (thePlant.numAllocated > 0) {
 			let updatedPlants = allPlants.map(aPlant => {
@@ -55,8 +46,12 @@ const Main = () => {
 	return (
 		<main>
 			<div id="left-column">
-				<h3>Available Plants</h3>
-				{availablePlantsJSX}
+				<div className="full-width">
+                    <h3>Available Plants</h3>
+                </div>
+                <div id="available-plants-grid">
+				    {availablePlantsJSX}
+                </div>
 			</div>
 			<div id="right-column">
 				<Flowerbed

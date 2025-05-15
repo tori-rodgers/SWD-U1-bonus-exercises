@@ -1,9 +1,10 @@
+import StyledLink from './StyledLink';
 import { capitalize } from '../shared/utils';
 
 const AvailablePlant = props => {
 	// Use destructuring to avoid having to use props.plant.id, props.plant.name, etc
 	let { plant, returnPlant, allocatePlant } = props;
-	let { name, color, image, numAvailable } = plant;
+	let { id, name, color, image, numAvailable } = plant;
 
 	return (
 		<div
@@ -13,7 +14,9 @@ const AvailablePlant = props => {
 			<div className="img-txt-combo">
 				<img src={image} width="50px" height="50px" alt={`${color} ${name}`} />
 				<p>
-					{name}, {capitalize(color)}
+					<StyledLink destination={`/plant/${id}`}>
+						{name}, {capitalize(color)}
+					</StyledLink>
 					<br />
 					<span className="amount-txt">{numAvailable} available</span>
 				</p>
