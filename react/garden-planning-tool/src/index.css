@@ -82,8 +82,10 @@ button:hover {
 	background-color: #a1c278;
 }
 
-.link {
-    color: #52643c;    
+.link, .link:active {
+    color: #52643c;  
+    text-decoration: underline;  
+    text-decoration-color: #52643c;
 }
 
 .link:hover {
@@ -93,6 +95,7 @@ button:hover {
 .link:visited {
     color: #23350b;
 }
+
 
 #page-layout {
 	flex-direction: column;
