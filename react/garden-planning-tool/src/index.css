@@ -82,6 +82,20 @@ button:hover {
 	background-color: #a1c278;
 }
 
+.link {
+	color: #52643c;
+	text-decoration: underline;
+	text-decoration-color: #52643c;
+}
+
+.link:hover {
+	color: #768f57;
+}
+
+.link:visited {
+	color: #23350b;
+}
+
 #page-layout {
 	flex-direction: column;
 	background-color: rgba(255, 255, 255, 0.8);
@@ -94,8 +108,14 @@ button:hover {
 
 #left-column {
 	flex-direction: column;
-	width: 300px;
+	width: 50%;
 	padding: 20px;
+}
+
+#available-plants-grid {
+	flex-direction: column;
+	width: 100%;
+	gap: 6px;
 }
 
 #right-column {
@@ -104,19 +124,33 @@ button:hover {
 	padding: 20px;
 }
 
+#plant-info-container {
+	height: 100%;
+	margin: 50px auto 20px;
+	padding: 30px 0;
+	gap: 30px;
+	border-bottom: 4px solid #768f57;
+}
+
 #spinner-container {
 	width: 100%;
 	height: 40vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* text-align: center; */
 }
 
 #spinner-icon {
 	display: block;
 	color: #52643c;
 	margin: 0;
+}
+
+.full-width {
+	width: 100%;
+}
+.link-container {
+	margin: 0 auto;
 }
 
 .clickable {
@@ -223,7 +257,7 @@ button:hover {
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
 	#page-layout {
 		width: 92vw;
 		margin: 4vw;
@@ -231,11 +265,24 @@ button:hover {
 	main {
 		flex-direction: column;
 	}
+	h4 {
+		width: 100%;
+	}
 	#left-column,
 	#right-column {
 		width: 100%;
 	}
 	.arrow-group {
 		transform: rotate(90deg);
+	}
+}
+
+@media screen and (max-width: 630px) {
+	h2,
+	h4 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.4rem;
 	}
 }
