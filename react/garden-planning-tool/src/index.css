@@ -83,7 +83,9 @@ button:hover {
 }
 
 .link {
-    color: #52643c;    
+    color: #52643c;   
+    text-decoration: underline;  
+    text-decoration-color: #52643c; 
 }
 
 .link:hover {
