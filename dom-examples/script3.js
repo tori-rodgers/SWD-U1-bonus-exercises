@@ -55,7 +55,7 @@ function renderPage(speechData) {
     pageTitle.innerText = `${speechData.title} | ${speechData.speaker}`;
 
     // Set background image
-    document.body.style.background = `black url(${speechData.imagePath}) no-repeat center top`;
+    document.body.style.background = `black url(${speechData.imagePath}) no-repeat center top fixed`;
     document.body.style.backgroundSize = "120%";
 
     // Set the three headings
