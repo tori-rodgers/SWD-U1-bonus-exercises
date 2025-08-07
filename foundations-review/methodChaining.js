@@ -2,7 +2,7 @@ let string = 'deab';
 
 // Example - Create "ABCDEF" in very few lines of code
 
-// TODO: Make string uppercase, create array from string
+// TODO: Make string uppercase, create array from string, and put in alpha order
 
 // TODO: Add "C"
 
