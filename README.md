@@ -15,6 +15,13 @@ To fully benefit from this practice, don't look at the solution until you have d
 
 ```git clone https://github.com/YourUsername/SWD-U1-bonus-exercises```
 
+## PRACTICE IN YOUR OWN BRANCHES
+If you want to update your forked repository from my parent repository when I add or change things to mine in the future, there are instructions below this section, BUT...
+It will go much easier if you don't ever change the code in `main`. Instead, do the following:
+1. From `main`, use the command `git checkout -b new-branch-name` to create your own branch for practicing (example: `functions-practice`).
+1. Practice as much as you'd like in your new branch, making commits as you add code.
+1. When you are ready to work on something different in another new branch, use the command `git checkout main` to return to `main` and then you can repeat the two steps above.
+
 ## UPDATE YOUR REPO WITH MY FUTURE CHANGES 
 
 #### Set the upstream link:
