@@ -74,7 +74,7 @@ function recursiveFactorialNoLogs(n) {
     if (n === 1) {
         return n;
     } 
-    return n * recursiveFactorial(n-1);
+    return n * recursiveFactorialNoLogs(n-1);
 }
 
 console.time("linear factorial");
