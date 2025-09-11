@@ -29,10 +29,11 @@ function getTitleCase(str) {
     return str
     .split(' ')
     .map((el, i) => {
-        if (i > 0 && doNotCapitalize.includes(el.toLowerCase())) {
-            return el.toLowerCase();
+        let elLower = el.toLowerCase(); // Keep your code D.R.Y.
+        if (i > 0 && doNotCapitalize.includes(elLower)) {
+            return elLower;
         } else {
-            return el[0].toUpperCase() + el.slice(1).toLowerCase();
+            return el[0].toUpperCase() + elLower.slice(1);
         }
     })
     .join(' ');

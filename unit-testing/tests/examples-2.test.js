@@ -14,20 +14,14 @@ let formattedPhoneNumber = '(314) 555-5678';
 // For testing roundNumberToDecimalPlace()
 let decimalNumber = 36.24971024837454;
 
-// For testing getTitleCase()
-let allLowerCase = 'the fellowship of the ring';
-let allUpperCase = 'THE FELLOWSHIP OF THE RING';
-let mixedCase = 'tHe feLloWshIp Of thE rInG';
-let correctResult = "The Fellowship of the Ring";
-
 // For testing reverseString()
 let abc = 'abc';
 let reversedAbc = 'cba';
 let notReversedAbc = 'cab';
 
-// For testing findPalindromes()
+// For testing getPalindromes()
 let maybePalindromes = [
-	'tacocat',
+    'tacocat',
 	'tacodog',
 	'banana',
 	'racecar',
@@ -36,9 +30,12 @@ let maybePalindromes = [
 ];
 let definitelyPalindromes = ['tacocat', 'racecar', 'kayak'];
 
-// For edge cases
-let emptyString = '';
-let space = ' ';
+// For testing getTitleCase()
+let allLowerCase = 'the fellowship of the ring';
+let allUpperCase = 'THE FELLOWSHIP OF THE RING';
+let mixedCase = 'tHe feLloWshIp Of thE rInG';
+let correctResult = "The Fellowship of the Ring";
+
 
 /* SET UP TESTS */
 
@@ -68,7 +65,7 @@ describe('The function isValidPhoneNumber()', () => {
 
 	// Edge cases
 	test('should return false for an empty string', () => {
-		expect(examples2.isValidPhoneNumber(emptyString)).toBe(false);
+		expect(examples2.isValidPhoneNumber("")).toBe(false);
 	});
 	test('should return false for a decimal number', () => {
 		expect(examples2.isValidPhoneNumber(tenDigitDecimalNumber)).toBe(false);
@@ -109,9 +106,9 @@ describe('The reverseString() function', () => {
 describe('The getPalindromes() function', () => {
     test('should return an array that includes only palindromes', () => {
         expect(examples2.getPalindromes(maybePalindromes)).toEqual(definitelyPalindromes);
+        // This is unnecessary but it's an example of how to use the matcher .toContain() with arrays
+        expect(examples2.getPalindromes(maybePalindromes)).toContain(definitelyPalindromes[2]);
     })
-    // check lengths
-    // check specific words
 })
 
 // Test getTitleCase()
@@ -126,3 +123,5 @@ describe('The getTitleCase() function', () => {
         expect(examples2.getTitleCase(mixedCase)).toEqual(correctResult);
     })
 })
+
+// Don't forget to use 'npm test' in the terminal to view code coverage. It should be at 100% for this file now!
