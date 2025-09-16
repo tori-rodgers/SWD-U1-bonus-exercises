@@ -26,6 +26,11 @@ describe('The Order class', () => {
 		});
         test('throws error if order is created without at least one bag', () => {
             // TODO: Write test and then update constructor 
+            // TODO: Add multiple expectations:
+            // - what if there is no argument? 
+            // - what if it is an empty array?
+            // - what if it is an array, but the elements aren't Bag objects?
+            // - what if it is not an array at all?
         })
 	});
 
@@ -38,5 +43,12 @@ describe('The Order class', () => {
             testOrderWithBags.setSubtotal();
             expect(testOrderWithBags.subtotal).toEqual(123.17);
         });
+        // TODO: Test that an error is thrown if the cost hasn't been set for one or more of the bags
 	});
+
+    // TODO: Write tests for setSalesTax that check the positive case 
+    // and also the case where a subTotal hasn't been calculated
+    // Use a single describe() block similar to the one above
+
+    // TODO: Write tests for setTotal similarly (what if sales tax hasn't been calculated?)
 });
