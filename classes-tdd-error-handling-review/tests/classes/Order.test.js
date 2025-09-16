@@ -26,12 +26,11 @@ describe('The Order class', () => {
 		});
         test('throws error if order is created without at least one bag', () => {
             // TODO: Write test and then update constructor 
-            // TODO: Add multiple expectations:
-            // - what if there is no argument? 
-            // - what if it is an empty array?
-            // - what if it is an array, but the elements aren't Bag objects?
-            // - what if it is not an array at all?
         })
+        // TODO: Add more tests:
+        // - what if the argument is an empty array?
+        // - what if it is an array, but the elements aren't Bag objects?
+        // - what if it is not an array at all?
 	});
 
 	describe('setSubtotal method', () => {
