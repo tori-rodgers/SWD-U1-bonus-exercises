@@ -4,7 +4,10 @@ const config = {
 	coverageDirectory: 'coverage', // Specify where to output coverage reports
 	collectCoverageFrom: [
 		'./unit-testing/*.js', // limit to specific directory
-        // Lines to exclude directories below are not needed since previous line is so specific
+        './classes-tdd-error-handling-review/**/*.js',
+        '!**/main.js',
+        '!**/dateFormatter.js',
+        // Lines to exclude directories below are not needed since previous lines are so specific
 		// '!**/node_modules/**', 
 		// '!**/coverage/**', 
 		// '!jest.config.js', 
