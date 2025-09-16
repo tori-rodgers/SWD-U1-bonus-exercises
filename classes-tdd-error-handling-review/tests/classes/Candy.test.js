@@ -8,17 +8,16 @@ beforeEach(() => {
 
 describe('The Candy class', () => {
 	describe('constructor', () => {
-
 		test('correctly instantiates a Candy object given a name and pricePerPound', () => {
 			expect(testCandy instanceof Candy).toBe(true);
 		});
 
 		test('correctly instantiates a Candy object with a name', () => {
-            expect(testCandy.name).toEqual("Almond Joy");
+			expect(testCandy.name).toEqual('Almond Joy');
 		});
 
 		test('correctly instantiates a Candy object with a pricePerPound', () => {
-            expect(testCandy.pricePerPound).toEqual(6.49);
+			expect(testCandy.pricePerPound).toEqual(6.49);
 		});
 
 		test('throws error when instantiation is attempted without arguments', () => {
@@ -28,7 +27,7 @@ describe('The Candy class', () => {
 			expect(instantiationAttempt).toThrow(
 				'The class Candy requires a value for name to be passed into the constructor.'
 			);
-            // The program does not continue to run once the error is thrown, so no need to test second error here
+			// The program does not continue to run once the error is thrown, so no need to test second error here
 		});
 
 		test('throws error when instantiation is attempted without pricePerPound argument', () => {
@@ -40,5 +39,4 @@ describe('The Candy class', () => {
 			);
 		});
 	});
-
 });

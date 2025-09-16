@@ -10,11 +10,10 @@ beforeEach(() => {
 });
 
 describe('The Bag class', () => {
-
 	describe('constructor', () => {
 		test('correctly instantiates a Bag object with a specific Candy object', () => {
 			expect(testBagWithCandy instanceof Bag).toBe(true);
-            expect(testBagWithCandy.candy).toBe(testCandy);
+			expect(testBagWithCandy.candy).toBe(testCandy);
 		});
 
 		test('throws error when instantiation is attempted without candy argument', () => {
@@ -41,7 +40,7 @@ describe('The Bag class', () => {
 			testBagWithCandy.setWeight(3, 8);
 			expect(testBagWithCandy.weight).toEqual(3.5);
 		});
-        
+
 		test('correctly calculates decimal pounds given pounds only', () => {
 			testBagWithCandy.setWeight(3);
 			expect(testBagWithCandy.weight).toEqual(3.0);
@@ -50,15 +49,17 @@ describe('The Bag class', () => {
 
 	describe('setCostByWeight() method', () => {
 		test('correctly calculates cost after weight is set', () => {
-            testBagWithCandy.setWeight(3, 8);
+			testBagWithCandy.setWeight(3, 8);
 			testBagWithCandy.setCostByWeight();
 			expect(testBagWithCandy.cost).toEqual(22.72);
 		});
-        test('throws error if weight has not yet been set', () => {
-            let setCostAttempt = () => {
-                testBagWithCandy.setCostByWeight();
-            }
-            expect(setCostAttempt).toThrow("Weight of bag must be set before cost can be calculated.");
-        })
+		test('throws error if weight has not yet been set', () => {
+			let setCostAttempt = () => {
+				testBagWithCandy.setCostByWeight();
+			};
+			expect(setCostAttempt).toThrow(
+				'Weight of bag must be set before cost can be calculated.'
+			);
+		});
 	});
 });

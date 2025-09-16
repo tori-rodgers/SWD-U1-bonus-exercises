@@ -41,7 +41,6 @@ try {
 
 	// Print receipt
 	order.printReceipt();
-
 } catch (error) {
 	console.error(error.stack);
 }

@@ -27,11 +27,13 @@ class Bag {
 	}
 
 	setCostByWeight() {
-        if (!this.weight) {
-            throw new Error("Weight of bag must be set before cost can be calculated.")
-        } else {
-            this.cost = utils.roundToPenny(this.candy.pricePerPound * this.weight);
-        }
+		if (!this.weight) {
+			throw new Error(
+				'Weight of bag must be set before cost can be calculated.'
+			);
+		} else {
+			this.cost = utils.roundToPenny(this.candy.pricePerPound * this.weight);
+		}
 	}
 }
 
