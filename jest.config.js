@@ -6,7 +6,6 @@ const config = {
 		'./unit-testing/*.js', // limit to specific directory
         './classes-tdd-error-handling-review/**/*.js',
         '!**/main.js',
-        '!**/dateFormatter.js',
         // Lines to exclude directories below are not needed since previous lines are so specific
 		// '!**/node_modules/**', 
 		// '!**/coverage/**', 
