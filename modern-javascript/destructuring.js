@@ -45,16 +45,17 @@ console.log(name);
 console.log(email);
 console.log(website);
 
-// YOUR TURN!
 
-// TODO: Create an array with several elements
+// YOUR TURN! Practice below.
+
+// TODO: Create an array with several elements (whatever you want!)
 let faveFruits = ["strawberries", "bananas", "grapes"];
 
 // TODO: Destructure the array and assign variables
 // to each element
 let [ faveFruit1, faveFruit2, faveFruit3 ] = faveFruits;
 
-// TODO: Print the values of the new variables
+// TODO: Print each of the new variables to show their values
 console.log(faveFruit1);
 console.log(faveFruit2);
 console.log(faveFruit3);

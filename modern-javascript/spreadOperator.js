@@ -3,13 +3,13 @@
 // The spread operator ... allows us to extract elements of an
 // array or key/value pairs from an object to use elsewhere
 
-// EXAMPLE: Math.min() does not take an array.
 let nums = [2, 6, 4, 9, 1, 7, 3];
 
-// Use Math.min() to determine the smallest number in the array.
+// EXAMPLE: Math.min() does not accept an array as an argument.
+// Use Math.min() to determine the smallest number in the array, and print it.
 console.log(Math.min(...nums));
 
-// EXAMPLE: Get a sorted array without mutating the original array
+// EXAMPLE: Create a sorted array without mutating the original array
 let letters = ['c', 'r', 'e', 'x', 'f', 'z', 'a'];
 let sortedLetters = [...letters].sort();
 
@@ -43,24 +43,26 @@ let saleItems = regularItems.map(item => {
 console.log(saleItems);
 console.log(regularItems);
 
-// YOUR TURN
 
-// TODO: Print the largest number from the array below
+// YOUR TURN! Practice below.
+
+// TODO: Print the largest number from the array below using Math.max()
 let amounts = [24.85, 19.24, 64.45, 12.03, 37.99];
 console.log(Math.max(...amounts));
 
-// TODO: Create an array that correctly capitalizes the names and print
-// Do not use the original array for the map — use a copy
+// TODO: Create a clone of the original array and store it in a new variable
+// Use that clone to create another new array that stores the names 
+// of the planets in proper Title Case, and print it
 let planets = ['tAtoOiNE', 'pANDorA', 'JUpiTEr', 'VulcAn'];
-let capPlanets = [...planets].map(
+let planetsCopy = [...planets];
+let titleCasePlanets = planetsCopy.map(
 	planet => planet[0].toUpperCase() + planet.slice(1).toLowerCase()
 );
-console.log(capPlanets);
+console.log(titleCasePlanets);
 
-// TODO: Time to put that jewelry on clearance. Using the saleItems 
-// array of objects above, run a comparison to see whether customers 
-// save more if 50% is taken off the regular price or if 30% 
-// is taken off the sale price. Print both.
+// TODO: Time to put that jewelry on clearance. Using the regularItems and saleItems 
+// arrays above, run a comparison to see whether customers save more if 50% is taken 
+// off the regular price or if 30% is taken off the sale price. Print both new arrays.
 let clearance50 = saleItems.map(item => {
     return { ...item, clearancePrice: item.price * (1 - 0.50) };
 });
@@ -69,3 +71,11 @@ let clearance30 = saleItems.map(item => {
 });
 console.log(clearance50);
 console.log(clearance30);
+
+// BONUS - Use .reduce() to get the sum of the clearance prices in each array to 
+// see which is less overall, assuming all products were purchased. 
+// Print both numbers with dollar signs.
+let sumFor50 = clearance50.reduce((sum, item) => sum += item.clearancePrice, 0);
+let sumFor30 = clearance30.reduce((sum, item) => sum += item.clearancePrice, 0);
+console.log("$" + sumFor50);
+console.log("$" + sumFor30);

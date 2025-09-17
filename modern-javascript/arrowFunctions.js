@@ -29,25 +29,24 @@ const revStrAnonShort = str => str.split("").reverse().join("");
 console.log(revStrAnonShort("yam"));
 
 
-// YOUR TURN
+// YOUR TURN! Practice below.
 
-// TODO: Store an anonymous function in a constant
-// Use arrow syntax to return a random element
+// TODO: Use arrow syntax to create an anonymous function, stored as a constant
+// The function should accept an array and return a random element
 // Multiple lines of code OK
 const getRandomElement = (arr) => {
     let randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
 }
 
-// TODO: Create an array of several elements as mock data
-// Call the function and pass in the array
+// Create an array of several elements as mock data
 let vowels = ["a", "b", "c", "d", "e"];
 
+// Call the function and pass in the array
 console.log(getRandomElement(vowels));
 
-// TODO: BONUS: Try to rewrite your function as a single-line short 
-// form arrow function
+// TODO: BONUS: Rewrite your function as a single-line, short form arrow function
 const getRandElShort = arr => arr[Math.floor(Math.random()*arr.length)];
 
-// TODO: Test the short form function
+// Test the short form function
 console.log(getRandElShort(vowels));
