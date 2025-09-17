@@ -1,0 +1,141 @@
+/**** CASCADING STYLE SHEET ****/
+
+/* See HTML file for instructions and README for resources */
+
+/*
+    Set defaults for HTML elements
+    IDs for specific elements
+    Classes to reuse across many elements
+*/
+
+body {
+	background-color: white;
+	font-family: 'Nunito', sans-serif;
+	font-size: 12pt;
+	font-weight: 400;
+	color: #333; /* text color - shorthand for #333333 */
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden; /* prevents unnecessary horizontal scrollbar */
+}
+
+header {
+	background-color: #429201;
+	height: auto;
+	padding: 20px;
+	margin: 0px;
+}
+
+main {
+	width: 100vw;
+	padding: 30px 100px; /* all content away from edges */
+	box-sizing: border-box; /* makes sure content adheres to padding settings on left and right */
+}
+
+footer {
+	color: white;
+	background-color: #429201;
+	text-align: center;
+	height: auto;
+	padding: 20px;
+	margin: 0px;
+}
+
+article {
+	position: relative;
+	width: 100%; /* relative to main, which is 100vw */
+	margin: 0px;
+	padding: 10px 0px; /* keeps expandable content centered with space on left and right */
+	box-sizing: border-box; /* makes sure content adheres to padding settings on left and right */
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin: 0px 0px 10px;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #429201;
+	margin: 5px; /* override default */
+}
+
+h4 {
+	font-weight: 500;
+	font-style: italic;
+	margin: 10px 0px 0px; /* override default */
+}
+
+p {
+	text-align: justify;
+	margin: 0.5rem 0px; /* override default */
+}
+
+img {
+	width: 250px;
+	margin: 10px 0px;
+}
+
+hr {
+	height: 0.4rem;
+	background-color: #429201;
+	border: none;
+	margin: 20px 0px 0px; /* adjust white space */
+}
+
+a {
+	color: #367700; /* darker */
+	font-weight: 600; /* bold */
+	text-decoration: none; /* remove default underline */
+}
+
+a:hover {
+	color: #49a300; /* lighter */
+}
+
+a:visited {
+	color: #295c00; /* darkest */
+}
+
+/**** Set IDs for specific elements ****/
+
+#page-title {
+	color: white;
+	text-align: center;
+	/* margin: 15px 0px 0px;  override default */
+}
+
+#tagline {
+	color: #222; /* a little darker than default set for body above */
+	text-align: center;
+	margin: 0px; /* override default */
+}
+
+#intro {
+	font-style: italic;
+	margin-bottom: 20px; /* a little extra space between p and hr */
+}
+
+/**** Set classes for custom styles ****/
+
+.right {
+	float: right; /* for images to float right of text */
+	margin-left: 20px;
+}
+
+.bordered {
+	border: 4px solid #429201;
+	padding: 0px;
+}
