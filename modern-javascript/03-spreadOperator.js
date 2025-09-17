@@ -43,7 +43,6 @@ let saleItems = regularItems.map(item => {
 console.log(saleItems);
 console.log(regularItems);
 
-
 // YOUR TURN! Practice below.
 
 // TODO: Print the largest number from the array below using Math.max()
@@ -51,7 +50,7 @@ let amounts = [24.85, 19.24, 64.45, 12.03, 37.99];
 console.log(Math.max(...amounts));
 
 // TODO: Create a clone of the original array and store it in a new variable
-// Use that clone to create another new array that stores the names 
+// Use that clone to create another new array that stores the names
 // of the planets in proper Title Case, and print it
 let planets = ['tAtoOiNE', 'pANDorA', 'JUpiTEr', 'VulcAn'];
 let planetsCopy = [...planets];
@@ -60,22 +59,28 @@ let titleCasePlanets = planetsCopy.map(
 );
 console.log(titleCasePlanets);
 
-// TODO: Time to put that jewelry on clearance. Using the regularItems and saleItems 
-// arrays above, run a comparison to see whether customers save more if 50% is taken 
+// TODO: Time to put that jewelry on clearance. Using the regularItems and saleItems
+// arrays above, run a comparison to see whether customers save more if 50% is taken
 // off the regular price or if 30% is taken off the sale price. Print both new arrays.
 let clearance50 = saleItems.map(item => {
-    return { ...item, clearancePrice: item.price * (1 - 0.50) };
+	return { ...item, clearancePrice: item.price * (1 - 0.5) };
 });
 let clearance30 = saleItems.map(item => {
-   return { ...item, clearancePrice: item.salePrice * (1 - 0.30) }
+	return { ...item, clearancePrice: item.salePrice * (1 - 0.3) };
 });
 console.log(clearance50);
 console.log(clearance30);
 
-// BONUS - Use .reduce() to get the sum of the clearance prices in each array to 
-// see which is less overall, assuming all products were purchased. 
+// BONUS - Use .reduce() to get the sum of the clearance prices in each array to
+// see which is less overall, assuming all products were purchased.
 // Print both numbers with dollar signs.
-let sumFor50 = clearance50.reduce((sum, item) => sum += item.clearancePrice, 0);
-let sumFor30 = clearance30.reduce((sum, item) => sum += item.clearancePrice, 0);
-console.log("$" + sumFor50);
-console.log("$" + sumFor30);
+let sumFor50 = clearance50.reduce(
+	(sum, item) => (sum += item.clearancePrice),
+	0
+);
+let sumFor30 = clearance30.reduce(
+	(sum, item) => (sum += item.clearancePrice),
+	0
+);
+console.log('$' + sumFor50);
+console.log('$' + sumFor30);
