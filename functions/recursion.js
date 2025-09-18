@@ -17,48 +17,13 @@ let itemsToUnpack = [
 
 // EXAMPLE: Use recursion to count up all the items in all the boxes!
 
-function countNestedItems(data) {
-    // console.log(data);
-	if (typeof data === "number") {
-		// console.log(`Adding the number ${data} to the count.`);
-		return data;
-	}
-	if (data.length === 0) {
-		// console.log("Empty array found.");
-		return 0;
-	}
-	// console.log("Recursing...");
-	return countNestedItems(data.shift()) + countNestedItems(data);
-}
+
 
 // EXAMPLE: Call the function with the test data
-console.log(countNestedItems(itemsToUnpack));
 
 
 // To illustrate how the call stack is utilized during recursion,
 // consider the factorial calculation
-
-// Write a recursive function to solve a factorial
-function recursiveFactorial(n) {
-	// console.log(`Function called for ${n}`);
-	// base case to stop recursion
-	if (n === 1) {
-		// console.log(n);
-		return n;
-	} 
-	// otherwise
-	// console.log(`Calling function for ${n-1}`)
-	let nextValue = n * recursiveFactorial(n - 1);
-	// console.log(nextValue);
-	return nextValue;
-}
-
-console.log(recursiveFactorial(15));
-
-
-
-// You can compare the efficiency of linear and recursive approaches
-// Sometimes it's better, sometimes it's not
 
 // This is a linear way to solve a factorial using a for loop
 function linearFactorial(n) {
@@ -69,18 +34,28 @@ function linearFactorial(n) {
 	return result;
 }
 
+
+// EXAMPLE: Write a recursive function to solve a factorial
+
+// Call the function
+
+
+
 // Recursive again, but without all the console.log statements
-function recursiveFactorialNoLogs(n) {
-    if (n === 1) {
-        return n;
-    } 
-    return n * recursiveFactorial(n-1);
-}
+// function recursiveFactorialNoLogs(n) {
+//     if (n === 1) {
+//         return n;
+//     } 
+//     return n * recursiveFactorialNoLogs(n-1);
+// }
 
-console.time("linear factorial");
-console.log(linearFactorial(15));
-console.timeEnd("linear factorial");
+// You can compare the efficiency of linear and recursive approaches
+// (Sometimes it's better, sometimes it's not)
 
-console.time("recursive factorial");
-console.log(recursiveFactorialNoLogs(15));
-console.timeEnd("recursive factorial");
+// console.time("linear factorial");
+// console.log(linearFactorial(15));
+// console.timeEnd("linear factorial");
+
+// console.time("recursive factorial");
+// console.log(recursiveFactorialNoLogs(15));
+// console.timeEnd("recursive factorial");

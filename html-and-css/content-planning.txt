@@ -1,0 +1,31 @@
+*********************************************************
+Use this file just to plan out the content before coding.
+*********************************************************
+	
+
+TITLE (logo optional)
+
+
+
+TAGLINE (optional)
+
+
+
+INTRO (short paragraph)
+
+
+
+MATERIALS/TOOLS/INGREDIENTS (unordered list or lists)
+
+
+
+STEPS/DIRECTIONS (ordered list)
+
+
+
+IMAGES (at least two)
+
+
+
+LINKS (at least two)
+

@@ -1,0 +1,24 @@
+/**** CASCADING STYLE SHEET ****/
+
+/* See HTML file for instructions and README for resources */
+
+
+/*
+    Set defaults for HTML elements
+    IDs for specific elements
+    Classes to reuse across many elements
+*/
+
+body {
+	/* TODO: add properties */
+}
+
+#page-title {
+	/* TODO: add properties */
+}
+
+/* EXAMPLE */
+.bordered {
+	border: 4px solid #015892;
+	padding: 0px;
+}
