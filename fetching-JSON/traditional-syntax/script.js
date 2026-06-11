@@ -8,6 +8,7 @@ const result = document.getElementById('result');
 
 // Event delegation - listen for click on entire document, then check id of target
 document.addEventListener('click', function (event) {
+
 	// RANDOM DOG PIC courtesy of https://dog.ceo/dog-api/
 	// Use the API documentation to look up the correct endpoint for a random photo
 	if (event.target.id === 'dog-button') {
@@ -15,15 +16,14 @@ document.addEventListener('click', function (event) {
         
 	}
 
-	// Challenge! Use async/await syntax for this one.
 	// RANDOM CAT PIC courtesy of https://thecatapi.com/
+	// Use the API documentation to look up the correct endpoint for 5 random photos
+	// Bonus: Narrow the breed to Norweigan Forest Cat
 	// You will need to request a free key
-	// Use the API documentation to look up the correct endpoint for a random photo
 	// Note: a header will be required!
+	// Display all five images in the result section.
 	if (event.target.id === 'cat-button') {
-		// TODO: Write an async function to fetch data and put image on page
-
-		// TODO: Call your async function to execute the fetch
-
+		// TODO: Fetch data with traditional syntax and put images on the page
 	}
+    
 });
