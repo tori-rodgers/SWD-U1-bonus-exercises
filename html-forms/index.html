@@ -1,36 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <!-- TODO: Edit title -->
-		<title>Title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- TODO: Add Google Fonts (Montserrat & Zen Tokyo Zoo) -->
+	<head>
+		<!-- Edit title ✅ -->
+		<title>River City Printing Company</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Add Google Fonts (Montserrat & Zen Tokyo Zoo) ✅ -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Tokyo+Zoo&display=swap"
+			rel="stylesheet"
+		/>
 
-        <!-- TODO: Link stylesheet -->
-
+		<!-- Link stylesheet ✅ -->
+		<link href="styles.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
-        <!-- TODO: Add header with h2 and add &starf; HTML entity with company name -->
+		<!-- Add header with h2 and add &starf; HTML entity with company name ✅ -->
+		<header>
+			<h2>&starf; River City Printing Company</h2>
+		</header>
 
+		<!-- TODO: Add main with h3 page title and a form -->
+		<main class="flex-col">
+			<!-- TODO: Within form, create input fields for the following:
+                 Name (text input)
+                 Address 1 (text input)
+                 Address 2 (text input)
+                 Omit Address 2 (checkbox)
+                 Phone (tel input)
+                 Email Address (email input)
+                 Quantity (select)
+                 Paper Type (radio buttons)
+                 Reset button
+                 Save button -->
+			<form>
+				<h4>Enter Details</h4>
 
-        <!-- TODO: Add main with h3 page title and a form -->
+				<div class="field-with-label">
+					<input id="name-input" name="name-input" type="text" required />
+					<label for="name-input">Name</label>
+				</div>
+				<div class="field-with-label">
+					<input
+						id="address1-input"
+						name="address1-input"
+						type="text"
+						required
+					/>
+					<label for="address1-input">Address Line 1</label>
+				</div>
+				<div class="field-with-label">
+					<input
+						id="address2-input"
+						name="address2-input"
+						type="text"
+						required
+					/>
+					<label for="address2-input"
+						>Address Line 2
+						<input id="omit-address2" name="omit-address2" type="checkbox" />
+						<label for="omit-address2" class="checkbox-label"
+							>Remove this line</label
+						>
+					</label>
+				</div>
 
+				<div class="field-with-label">
+					<input id="phone-input" name="phone-input" type="tel" required />
+					<label for="phone-input">Phone Number</label>
+				</div>
+				<div class="field-with-label">
+					<input id="email-input" name="email-input" type="email" required />
+					<label for="email-input">Email Address</label>
+				</div>
+                <div class="form-group flex-col">
+                    <div class="space-between">
+                        <select id="quantity-input" name="quantity-input" required>
+                            <option value="250">250</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                        </select>
 
-        <!-- TODO: Within form, create input fields for the following:
-            Name (text input)
-            Address 1 (text input)
-            Address 2 (text input)
-            Omit Address 2 (checkbox)
-            Phone (tel input)
-            Email Address (email input)
-            Quantity (select)
-            Paper Type (radio buttons)
-            Reset button
-            Save button -->
+                    </div>
 
+                </div>
+			</form>
+		</main>
 
-        <!-- TODO: Add a footer with copyright, address, phone, and email -->
-
+		<!-- Add a footer with copyright, address, phone, and email ✅ -->
+		<footer>
+			<p>
+				&copy;2026 River Printing Company, LLC &starf; 123 Main Street, St.
+				Louis, MO 12345 &starf; info@rivercityprintingstl.com
+			</p>
+		</footer>
 	</body>
 </html>
